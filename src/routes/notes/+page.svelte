@@ -1,5 +1,6 @@
 <script lang="ts">
 	import NoteDialog from '$lib/components/NoteDialog.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 	import Plus from '$lib/components/icons/plus.svelte';
 	import Sad from '$lib/components/icons/sad.svelte';
 	import { format } from 'date-fns';
@@ -49,6 +50,31 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<SEO
+		title="NoteStar: store your notes in the cloud"
+		description="NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud."
+		keywords={['note', 'notes', 'notestar', 'notestar.app', 'notestar.app', 'notestarapp']}
+		author="NaviTheCoderboi"
+		robots="index, follow"
+		themeColor="#f43f5e"
+		og={{
+			title: 'NoteStar: store your notes in the cloud',
+			description:
+				'NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud.',
+			image: '/favicon.png',
+			type: 'website'
+		}}
+		twitter={{
+			card: 'summary',
+			creator: 'NaviTheCoderboi',
+			title: 'NoteStar: store your notes in the cloud',
+			description:
+				'NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud.',
+			image: '/favicon.png'
+		}}
+	/>
+</svelte:head>
 <main class="min-h-screen bg-slate-800 text-white py-8 px-4">
 	<ul class="flex justify-center items-center gap-5">
 		<div>

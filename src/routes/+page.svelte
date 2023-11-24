@@ -1,12 +1,38 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Diary from '$lib/assets/diary.png';
+	import SEO from '$lib/components/SEO.svelte';
 	import Arrow from '$lib/components/icons/arrow.svelte';
 	import Discord from '$lib/components/icons/discord.svelte';
 	import Google from '$lib/components/icons/google.svelte';
 	import { signIn } from '@auth/sveltekit/client';
 </script>
 
+<svelte:head>
+	<SEO
+		title="NoteStar: store your notes in the cloud"
+		description="NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud."
+		keywords={['note', 'notes', 'notestar', 'notestar.app', 'notestar.app', 'notestarapp']}
+		author="NaviTheCoderboi"
+		robots="index, follow"
+		themeColor="#f43f5e"
+		og={{
+			title: 'NoteStar: store your notes in the cloud',
+			description:
+				'NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud.',
+			image: '/favicon.png',
+			type: 'website'
+		}}
+		twitter={{
+			card: 'summary',
+			creator: 'NaviTheCoderboi',
+			title: 'NoteStar: store your notes in the cloud',
+			description:
+				'NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud.',
+			image: '/favicon.png'
+		}}
+	/>
+</svelte:head>
 <main class="bg-slate-900 h-screen w-full grid place-items-center">
 	<div class="flex justify-center gap-5 px-3 py-6 sm:p-10 rounded-2xl bg-slate-800">
 		<img src={Diary} alt="diary" class="object-fill p-2 hidden sm:inline" />

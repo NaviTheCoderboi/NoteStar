@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import Editor from '$lib/components/Editor.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 	import Arrow from '$lib/components/icons/arrow.svelte';
 	import Bin from '$lib/components/icons/bin.svelte';
 	import Save from '$lib/components/icons/save.svelte';
@@ -116,10 +117,37 @@
 			goto('/notes');
 		}
 	};
-
 	let content: OutputData = data.note?.content || { blocks: [] };
 </script>
 
+<svelte:head>
+	<SEO
+		title={data.note?.title || 'NoteStar: store your notes in the cloud'}
+		description={data.note?.description ||
+			'NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud.'}
+		keywords={['note', 'notes', 'notestar', 'notestar.app', 'notestar.app', 'notestarapp']}
+		author="NaviTheCoderboi"
+		robots="index, follow"
+		themeColor="#f43f5e"
+		og={{
+			title: data.note?.title || 'NoteStar: store your notes in the cloud',
+			description:
+				data.note?.description ||
+				'NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud.',
+			image: '/favicon.png',
+			type: 'website'
+		}}
+		twitter={{
+			card: 'summary',
+			creator: 'NaviTheCoderboi',
+			title: data.note?.title || 'NoteStar: store your notes in the cloud',
+			description:
+				data.note?.description ||
+				'NoteStar is a free and open-source note-taking app that allows you to store your notes in the cloud.',
+			image: '/favicon.png'
+		}}
+	/>
+</svelte:head>
 <main class="min-h-screen w-full bg-slate-800">
 	<section class="flex flex-col gap-8 w-full px-4 md:px-0 md:w-2/3 mx-auto py-8">
 		<div class="relative">
