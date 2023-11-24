@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./lib/assets/Poppins-Regular.ttf");
+}
+
+body {
+    font-family: 'Poppins', monospace;
+    color: white;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+    width: 8px;
+    background-color: rgb(30 41 59);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(51 65 85);
+    border-radius: 4px;
+}
+
+.ce-toolbar__plus {
+    background-color: transparent;
+    color: white;
+}
+
+.ce-toolbar__plus:hover {
+    background-color: rgb(51 65 85);
+}
+
+.ce-toolbar__settings-btn {
+    background-color: transparent;
+    color: white;
+}
+
+.ce-toolbar__settings-btn:hover {
+    background-color: rgb(51 65 85);
+}
+
+.ce-popover--opened,
+.tc-popover--opened {
+    background-color: rgb(51 65 85);
+    border-color: rgb(71 85 105);
+}
+
+.css-search-field,
+.ce-popover__search {
+    background-color: rgb(100 116 139);
+    border-color: rgb(148 163 184);
+}
+
+.cdx-search-field__icon svg {
+    color: rgb(226 232 240);
+}
+
+.cdx-search-field__input::placeholder {
+    color: rgb(226 232 240);
+}
+
+.ce-popover__nothing-found-message {
+    color: rgb(226 232 240);
+}
+
+.ce-popover-item__icon,
+.ce-conversion-tool__icon,
+.tc-popover__item-icon {
+    color: white;
+    background-color: rgb(71 85 105);
+    border-color: rgb(100 116 139);
+}
+
+.ce-popover-item__title {
+    color: white;
+}
+
+.ce-popover-item:hover,
+.ce-conversion-tool:hover {
+    cursor: pointer;
+}
+
+.ce-popover-item:hover:not(.ce-popover-item--no-hover),
+.ce-conversion-tool:hover {
+    background-color: rgb(100 116 139);
+}
+
+.cdx-notify {
+    color: black;
+}
+
+.cdx-notify__cross {
+    padding: 5px;
+}
+
+.ce-inline-toolbar {
+    background-color: rgb(51 65 85);
+    color: white;
+    border-color: rgb(71 85 105);
+}
+
+.ce-inline-tool:hover,
+.ce-inline-toolbar__dropdown:hover {
+    background-color: rgb(100 116 139);
+}
+
+.ce-conversion-toolbar--showed {
+    background-color: rgb(51 65 85);
+    border-color: rgb(71 85 105);
+}
+
+.ce-conversion-toolbar__label {
+    color: rgb(226 232 240);
+}
+
+.cdx-marker {
+    background-color: rgb(253 164 175);
+    color: rgb(15 23 42);
+}
+
+/* highlightjs theme */
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em
+}
+
+code.hljs {
+    padding: 3px 5px
+}
+
+.hljs {
+    color: #abb2bf;
+    background: #282c34
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: #5c6370;
+    font-style: italic
+}
+
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+    color: #c678dd
+}
+
+.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+    color: #e06c75
+}
+
+.hljs-literal {
+    color: #56b6c2
+}
+
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+    color: #98c379
+}
+
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+    color: #d19a66
+}
+
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+    color: #61aeee
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+    color: #e6c07b
+}
+
+.hljs-emphasis {
+    font-style: italic
+}
+
+.hljs-strong {
+    font-weight: 700
+}
+
+.hljs-link {
+    text-decoration: underline
+}
